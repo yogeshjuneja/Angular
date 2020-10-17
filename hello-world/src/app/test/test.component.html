@@ -1,0 +1,46 @@
+<button (click)="checkbtnclick($event)">Check Button</button>
+<button (click)="btnclick='valueassigned'">Without handler</button>
+{{btnclick}}
+<br>
+<input #inputtext type="text" />
+<button (click)="textboxvalue(inputtext.value)">Get Textboxvalue</button>
+<br> {{inputtextvalue!=""?"You Entered :"+inputtextvalue:""}}
+
+<br>
+<input type="text" [(ngModel)]="realtimename">
+{{realtimename}}
+<br>
+Display test based on even odd minutes
+<h4 *ngIf="displaydata<1; else oddtemplate">Even Minute </h4>
+<ng-template #oddtemplate>
+  <h4>Odd Minute</h4>
+</ng-template>
+
+
+<br>
+By Switch Case
+
+<div [ngSwitch]="displaydata">
+  <h4 *ngSwitchCase="'0'">Even minutes</h4>
+  <h4 *ngSwitchCase="'1'">Odd minutes</h4>
+
+
+  <h4 *ngSwitchDefault></h4>
+
+</div>
+
+
+<br>
+For ng-component
+<div *ngFor="let c of color; index as i">
+  {{i}} {{c}} ,
+</div>
+<br>
+<div id="div">
+  Data From Parent Component {{parentdata}}
+</div>
+
+<input type="text" #send>
+<button (click)="sendeventtoparent(send.value)">Click to send textbox event to parent</button>
+
+<h4></h4>
