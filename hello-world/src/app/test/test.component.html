@@ -43,4 +43,20 @@ For ng-component
 <input type="text" #send>
 <button (click)="sendeventtoparent(send.value)">Click to send textbox event to parent</button>
 
-<h4></h4>
+<br>
+<span>
+
+  {{pipevalue | lowercase}} --lowercase<br>
+  {{pipevalue | uppercase}} --uppercase<br>
+  {{pipevalue |   titlecase}} --titlecase<br>
+  {{pipevalue | slice:3:7 | uppercase}} --slice<br>
+  {{color|json}}-json <br>
+  {{5.678 | number :'3.5-8'}} -- decimal<br>
+  {{0.25 | percent}} -- percentage<br>
+  {{2000| currency:'IN'}}-- currency<br>
+  {{datepipeval | date:'mediumDate'}}--mediumDate
+  {{datepipeval | date:'shortDate'}} --shortDate
+
+
+
+</span>
