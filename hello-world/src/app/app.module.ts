@@ -1,3 +1,5 @@
+import { RouterModule } from '@angular/router';
+import { ErrorcomponentComponent } from './errorcomponent/errorcomponent.component';
 import { EmployeeserviceService } from './employeeservice.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -9,6 +11,8 @@ import { TestComponent } from './test/test.component';
 import { EmployeesComponent } from './employees/employees.component';
 import { EmployeedetailsComponent } from './employeedetails/employeedetails.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HomepageComponent } from './homepage/homepage.component';
+import { ChidrouteComponent } from './chidroute/chidroute.component';
 
 
 @NgModule({
@@ -18,9 +22,14 @@ import { HttpClientModule } from '@angular/common/http';
     TestComponent,
     EmployeesComponent,
     EmployeedetailsComponent,
+    ErrorcomponentComponent,
+    HomepageComponent,
+    ChidrouteComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, RouterModule],
   providers: [EmployeeserviceService],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+
+}

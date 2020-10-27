@@ -1,9 +1,25 @@
-<p>employeedetails works!</p>
+<p>You select Employee With ID={{employeeid}}</p>
+<table>
+  <thead>
+    <th>Name</th>
+    <th>ID</th>
+    <th>Age</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let emp of employees">
+      <td>
+        {{emp.name}}
 
-<ul *ngFor="let emp of employees">
-  <li>
-    {{emp.name}}
-    {{emp.id}}
-    {{emp.age}}
-  </li>
-</ul>
+      </td>
+      <td>
+        {{emp.id}}
+
+      </td>
+      <td>
+        {{emp.Age}}
+      </td>
+    </tr>
+  </tbody>
+
+</table>
+

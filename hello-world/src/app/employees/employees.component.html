@@ -2,6 +2,14 @@
 {{errmsg}}
 <ul *ngFor="let emp of employees">
   <li>
-    {{emp.name}}
+    <a (click)="redirecttoemployes(emp)">
+      {{emp.name}}
+    </a>
   </li>
 </ul>
+
+
+<button (click)="ChildRoute()">Run Child Route</button>
+<router-outlet>
+
+</router-outlet>
