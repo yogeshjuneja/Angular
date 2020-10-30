@@ -1,3 +1,4 @@
+import { EnrollmentService } from './Services/enrollment.service';
 import { RouterModule } from '@angular/router';
 import { ErrorcomponentComponent } from './errorcomponent/errorcomponent.component';
 import { EmployeeserviceService } from './employeeservice.service';
@@ -13,6 +14,9 @@ import { EmployeedetailsComponent } from './employeedetails/employeedetails.comp
 import { HttpClientModule } from '@angular/common/http';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ChidrouteComponent } from './chidroute/chidroute.component';
+import { TdfformsComponent } from './tdfforms/tdfforms.component';
+
+
 
 
 @NgModule({
@@ -24,10 +28,12 @@ import { ChidrouteComponent } from './chidroute/chidroute.component';
     EmployeedetailsComponent,
     ErrorcomponentComponent,
     HomepageComponent,
-    ChidrouteComponent
+    ChidrouteComponent,
+    TdfformsComponent,
+
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, RouterModule],
-  providers: [EmployeeserviceService],
+  providers: [EmployeeserviceService, EnrollmentService],
   bootstrap: [AppComponent],
 })
 export class AppModule {

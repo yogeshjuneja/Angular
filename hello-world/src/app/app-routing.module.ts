@@ -1,3 +1,4 @@
+import { TdfformsComponent } from './tdfforms/tdfforms.component';
 import { ChidrouteComponent } from './chidroute/chidroute.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { TestComponent } from './test/test.component';
@@ -31,7 +32,9 @@ const routes: Routes = [
   },
   { path: 'practice', component: TestComponent },
   { path: 'home', component: HomepageComponent },
+  { path: 'tdf-form', component: TdfformsComponent },
   { path: '**', component: ErrorcomponentComponent }
+
 ];
 
 @NgModule({

@@ -8,7 +8,6 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <style>
-
   :host {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 14px;
@@ -32,10 +31,11 @@
   }
 
 
-  .border{
-border-radius: 1px;
-border-bottom: red;
-}
+  .border {
+    border-radius: 1px;
+    border-bottom: red;
+  }
+
   .spacer {
     flex: 1;
   }
@@ -302,7 +302,6 @@ border-bottom: red;
       visibility: hidden;
     }
   }
-
 </style>
 
 
@@ -330,11 +329,12 @@ border-bottom: red;
 </div>
 <br><br><br><br><br><br><br>
 <div style="float: left;">
-<a [routerLink]="['/employees']" class="card" routerLinkActive="border" >Employee</a>
-<a [routerLink]="['/practice']" class="card" routerLinkActive="border" >Practice Component</a>
+  <a [routerLink]="['/employees']" class="card" routerLinkActive="border">Employee</a>
+  <a [routerLink]="['/practice']" class="card" routerLinkActive="border">Practice Component</a>
+  <a [routerLink]="['/tdf-form']" class="card" routerLinkActive="border">Forms</a>
 </div>
-<div class="content" role="main" style="margin: 0px; padding: 0px;"  >
-<router-outlet></router-outlet>
+<div class="content" role="main" style="margin: 0px; padding: 0px;">
+  <router-outlet></router-outlet>
 </div>
 
 <div class="content" role="main">
@@ -634,7 +634,3 @@ border-bottom: red;
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-
-
-
