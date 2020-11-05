@@ -4,7 +4,7 @@ import { ErrorcomponentComponent } from './errorcomponent/errorcomponent.compone
 import { EmployeeserviceService } from './employeeservice.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TestComponentComponent } from './test-component/test-component.component';
@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ChidrouteComponent } from './chidroute/chidroute.component';
 import { TdfformsComponent } from './tdfforms/tdfforms.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 
 
@@ -30,9 +31,10 @@ import { TdfformsComponent } from './tdfforms/tdfforms.component';
     HomepageComponent,
     ChidrouteComponent,
     TdfformsComponent,
+    ReactiveFormComponent,
 
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, RouterModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, RouterModule, ReactiveFormsModule],
   providers: [EmployeeserviceService, EnrollmentService],
   bootstrap: [AppComponent],
 })

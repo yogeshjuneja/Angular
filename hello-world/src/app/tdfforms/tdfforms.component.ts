@@ -13,6 +13,7 @@ export class TdfformsComponent implements OnInit {
   topics = ['Angular', 'React', 'Vue', 'Node', 'Coffee'];
   usermodel = new Userinfo('Rob', 'Rob@test.com', 9876545365, '', '', true);
   haserror: boolean = true;
+  errmsg = '';
 
 
   topicchange(value) {
@@ -31,9 +32,10 @@ export class TdfformsComponent implements OnInit {
 
   onSubmit() {
 
+    alert('hello');
     this.erollmentservice.enroll(this.usermodel).subscribe(
       data => data,
-      error => error);
+      error => this.errmsg = error.statusText);
 
 
 

@@ -1,3 +1,4 @@
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { TdfformsComponent } from './tdfforms/tdfforms.component';
 import { ChidrouteComponent } from './chidroute/chidroute.component';
 import { HomepageComponent } from './homepage/homepage.component';
@@ -33,6 +34,7 @@ const routes: Routes = [
   { path: 'practice', component: TestComponent },
   { path: 'home', component: HomepageComponent },
   { path: 'tdf-form', component: TdfformsComponent },
+  { path: 'reactive-form', component: ReactiveFormComponent },
   { path: '**', component: ErrorcomponentComponent }
 
 ];

@@ -1,0 +1,47 @@
+<div class="container-fluid">
+  <h2>Registration form</h2>
+  <form [formGroup]="registrationForm">
+    <div class="form-group">
+      <label>UserName</label>
+      <input type="text"
+        [class.is-invalid]="registrationForm.get('username').invalid &&  registrationForm.get('username').touched"
+        required class="form-control" name="username" maxlength="20" formControlName="username">
+      <small class="text-danger d-none">Username is Required</small>
+    </div>
+
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password" required class="form-control" name="password" maxlength="20" formControlName="password">
+      <small class="text-danger d-none">Password is Required</small>
+    </div>
+
+
+    <div class="form-group">
+      <label>Confirm Password</label>
+      <input type="password" required class="form-control" name="confirmpassword" maxlength="20"
+        formControlName="confirmpassword">
+      <small class="text-danger d-none">Confirm Password is Required</small>
+    </div>
+
+
+    <div formGroupName="address">
+
+      <div class="form-group">
+        <label>City</label>
+        <input type="text" class="form-control" formControlName="city">
+      </div>
+      <div class="form-group">
+        <label>State</label>
+        <input type="text" class="form-control" formControlName="state">
+      </div>
+      <div class="form-group">
+        <label>PIN</label>
+        <input type="tel" class="form-control" formControlName="pin">
+      </div>
+    </div>
+
+
+    <button class="btn btn-primary" type="submit">Register</button>
+    <button (click)="LoadAPI()" class="btn btn-secondary ml-2"> Load API Data</button>
+  </form>
+</div>

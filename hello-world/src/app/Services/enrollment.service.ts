@@ -1,6 +1,7 @@
+import { catchError } from 'rxjs/operators';
 import { Userinfo } from './../userinfo';
-import { HttpClient } from '@angular/common/http';
-
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { Observable, throwError } from 'rxjs';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -10,10 +11,19 @@ export class EnrollmentService {
 
   url = '';
   constructor(private client: HttpClient) { }
+
+
+
+
   enroll(user: Userinfo) {
-    return this.client.post(this.url, user);
+    return this.client.post<any>(this.url, user)
+      .pipe(catchError(this.handleerror));
 
 
+  }
+
+  handleerror(error: HttpErrorResponse) {
+    return throwError(error);
   }
 
 }
